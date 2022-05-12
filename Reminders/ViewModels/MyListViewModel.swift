@@ -28,4 +28,19 @@ struct MyListViewModel: Identifiable {
     init(myList: MyList) {
         self.myList  = myList
     }
+    
+    
+    var itemsCount: Int {
+        items.count
+    }
+    
+    var items: [MyListItemViewModel] {
+        guard let items = myList.items,
+              let myItems = (items.allObjects as? [MyListItem])
+        else {
+            return []
+        }
+        
+        return myItems.filter {$0.isCompleted == false}.map(MyListItemViewModel.init)
+    }
 }

@@ -5,7 +5,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MyListItem" inverseName="myList" inverseEntity="MyListItem"/>
     </entity>
-    <entity name="MyListItem" representedClassName="MyListItem" syncable="YES">
+    <entity name="MyListItem" representedClassName="MyListItem" syncable="YES" codeGenerationType="class">
         <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isCompleted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>

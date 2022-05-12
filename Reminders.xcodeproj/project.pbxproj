@@ -25,6 +25,11 @@
 		04574B75282D4BD000B53965 /* MyListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B74282D4BD000B53965 /* MyListsView.swift */; };
 		04574B77282D65A000B53965 /* MyListItemHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B76282D65A000B53965 /* MyListItemHeaderView.swift */; };
 		04574B79282D670D00B53965 /* MyListItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B78282D670D00B53965 /* MyListItemsView.swift */; };
+		04574B7B282D686D00B53965 /* MyListItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B7A282D686D00B53965 /* MyListItemsViewModel.swift */; };
+		04574B7D282D6F7700B53965 /* DueDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B7C282D6F7700B53965 /* DueDate.swift */; };
+		04574B80282D6FE000B53965 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B7F282D6FE000B53965 /* Date+Extensions.swift */; };
+		04574B82282D747900B53965 /* AddNewListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B81282D747900B53965 /* AddNewListItemView.swift */; };
+		04574B84282D757A00B53965 /* DueDateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B83282D757A00B53965 /* DueDateSelectionView.swift */; };
 		04F9BE63282C457000CCCE58 /* ReminderModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040A4CF8282C42FC0016125E /* ReminderModel.xcdatamodeld */; };
 		04F9BE65282C522100CCCE58 /* AddNewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9BE64282C522100CCCE58 /* AddNewListView.swift */; };
 		04F9BE67282C532200CCCE58 /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9BE66282C532200CCCE58 /* ColorListView.swift */; };
@@ -72,6 +77,11 @@
 		04574B74282D4BD000B53965 /* MyListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsView.swift; sourceTree = "<group>"; };
 		04574B76282D65A000B53965 /* MyListItemHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListItemHeaderView.swift; sourceTree = "<group>"; };
 		04574B78282D670D00B53965 /* MyListItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListItemsView.swift; sourceTree = "<group>"; };
+		04574B7A282D686D00B53965 /* MyListItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListItemsViewModel.swift; sourceTree = "<group>"; };
+		04574B7C282D6F7700B53965 /* DueDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDate.swift; sourceTree = "<group>"; };
+		04574B7F282D6FE000B53965 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		04574B81282D747900B53965 /* AddNewListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListItemView.swift; sourceTree = "<group>"; };
+		04574B83282D757A00B53965 /* DueDateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateSelectionView.swift; sourceTree = "<group>"; };
 		04F9BE64282C522100CCCE58 /* AddNewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListView.swift; sourceTree = "<group>"; };
 		04F9BE66282C532200CCCE58 /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
 		04F9BE69282C542600CCCE58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -125,6 +135,7 @@
 		040A4CB5282C349C0016125E /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
+				04574B7E282D6FCE00B53965 /* Extensions */,
 				04574B6D282D3FB400B53965 /* Transformers */,
 				04F9BE68282C541800CCCE58 /* Utils */,
 				040A4CF0282C3F8E0016125E /* ViewModels */,
@@ -183,6 +194,8 @@
 				04574B74282D4BD000B53965 /* MyListsView.swift */,
 				04574B76282D65A000B53965 /* MyListItemHeaderView.swift */,
 				04574B78282D670D00B53965 /* MyListItemsView.swift */,
+				04574B81282D747900B53965 /* AddNewListItemView.swift */,
+				04574B83282D757A00B53965 /* DueDateSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +205,7 @@
 			children = (
 				040A4CEB282C393C0016125E /* MyList.swift */,
 				040A4CF3282C40AE0016125E /* BaseModel.swift */,
+				04574B7C282D6F7700B53965 /* DueDate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 				040A4CF1282C3FA60016125E /* AddNewListViewModel.swift */,
 				04574B70282D437300B53965 /* MyListsViewModel.swift */,
 				04574B72282D47BA00B53965 /* MyListViewModel.swift */,
+				04574B7A282D686D00B53965 /* MyListItemsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -220,6 +235,14 @@
 				04574B6E282D3FD700B53965 /* NSColorTransformer.swift */,
 			);
 			path = Transformers;
+			sourceTree = "<group>";
+		};
+		04574B7E282D6FCE00B53965 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04574B7F282D6FE000B53965 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		04F9BE68282C541800CCCE58 /* Utils */ = {
@@ -368,15 +391,20 @@
 				04F9BE63282C457000CCCE58 /* ReminderModel.xcdatamodeld in Sources */,
 				040A4CF2282C3FA60016125E /* AddNewListViewModel.swift in Sources */,
 				04F9BE65282C522100CCCE58 /* AddNewListView.swift in Sources */,
+				04574B84282D757A00B53965 /* DueDateSelectionView.swift in Sources */,
 				04F9BE67282C532200CCCE58 /* ColorListView.swift in Sources */,
 				040A4CE6282C361A0016125E /* SideBarView.swift in Sources */,
 				040A4CB7282C349C0016125E /* RemindersApp.swift in Sources */,
 				04574B77282D65A000B53965 /* MyListItemHeaderView.swift in Sources */,
+				04574B82282D747900B53965 /* AddNewListItemView.swift in Sources */,
 				040A4CE3282C34D20016125E /* HomeScreen.swift in Sources */,
+				04574B80282D6FE000B53965 /* Date+Extensions.swift in Sources */,
+				04574B7D282D6F7700B53965 /* DueDate.swift in Sources */,
 				04574B75282D4BD000B53965 /* MyListsView.swift in Sources */,
 				040A4CF4282C40AE0016125E /* BaseModel.swift in Sources */,
 				04574B6F282D3FD700B53965 /* NSColorTransformer.swift in Sources */,
 				040A4CEC282C393C0016125E /* MyList.swift in Sources */,
+				04574B7B282D686D00B53965 /* MyListItemsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

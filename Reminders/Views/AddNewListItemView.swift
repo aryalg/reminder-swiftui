@@ -12,6 +12,8 @@ struct AddNewListItemView: View {
     @State private var title: String = ""
     @State private var dueDate: DueDate?
     
+    
+    var onSave: (String, Date?) -> Void
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
@@ -37,7 +39,11 @@ struct AddNewListItemView: View {
                     }
                 }
                 Button("Save") {
-                    
+                    if !title.isEmpty {
+                        onSave(title, dueDate?.value)
+                        title = ""
+                        dueDate = nil
+                    }
                 }
             }.padding()
         }
@@ -46,6 +52,8 @@ struct AddNewListItemView: View {
 
 struct AddNewListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewListItemView()
+        AddNewListItemView { _, _ in
+            //
+        }
     }
 }

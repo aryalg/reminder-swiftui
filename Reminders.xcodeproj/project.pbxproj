@@ -30,6 +30,7 @@
 		04574B80282D6FE000B53965 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B7F282D6FE000B53965 /* Date+Extensions.swift */; };
 		04574B82282D747900B53965 /* AddNewListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B81282D747900B53965 /* AddNewListItemView.swift */; };
 		04574B84282D757A00B53965 /* DueDateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B83282D757A00B53965 /* DueDateSelectionView.swift */; };
+		04574B86282E2C7E00B53965 /* MyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04574B85282E2C7E00B53965 /* MyListItem.swift */; };
 		04F9BE63282C457000CCCE58 /* ReminderModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040A4CF8282C42FC0016125E /* ReminderModel.xcdatamodeld */; };
 		04F9BE65282C522100CCCE58 /* AddNewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9BE64282C522100CCCE58 /* AddNewListView.swift */; };
 		04F9BE67282C532200CCCE58 /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9BE66282C532200CCCE58 /* ColorListView.swift */; };
@@ -82,6 +83,7 @@
 		04574B7F282D6FE000B53965 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		04574B81282D747900B53965 /* AddNewListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListItemView.swift; sourceTree = "<group>"; };
 		04574B83282D757A00B53965 /* DueDateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateSelectionView.swift; sourceTree = "<group>"; };
+		04574B85282E2C7E00B53965 /* MyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListItem.swift; sourceTree = "<group>"; };
 		04F9BE64282C522100CCCE58 /* AddNewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListView.swift; sourceTree = "<group>"; };
 		04F9BE66282C532200CCCE58 /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
 		04F9BE69282C542600CCCE58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				040A4CEB282C393C0016125E /* MyList.swift */,
 				040A4CF3282C40AE0016125E /* BaseModel.swift */,
 				04574B7C282D6F7700B53965 /* DueDate.swift */,
+				04574B85282E2C7E00B53965 /* MyListItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				040A4CB7282C349C0016125E /* RemindersApp.swift in Sources */,
 				04574B77282D65A000B53965 /* MyListItemHeaderView.swift in Sources */,
 				04574B82282D747900B53965 /* AddNewListItemView.swift in Sources */,
+				04574B86282E2C7E00B53965 /* MyListItem.swift in Sources */,
 				040A4CE3282C34D20016125E /* HomeScreen.swift in Sources */,
 				04574B80282D6FE000B53965 /* Date+Extensions.swift in Sources */,
 				04574B7D282D6F7700B53965 /* DueDate.swift in Sources */,

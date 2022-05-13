@@ -27,7 +27,7 @@ struct MyListItemsView: View {
         VStack(alignment: .leading) {
             List {
                 ForEach(items, id: \.listItemId) {item in
-                    Text(item.title)
+                   ListItemCell(item: item)
                     Divider()
                 }
                 AddNewListItemView { title , dueDate in

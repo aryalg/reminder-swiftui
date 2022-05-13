@@ -10,6 +10,7 @@ import SwiftUI
 struct ListItemCell: View {
     
     @State private var active: Bool = false
+    @State private var showPopover: Bool = false
     
     let item: MyListItemViewModel
     
@@ -45,13 +46,21 @@ struct ListItemCell: View {
                 Image(systemName: Constants.Icons.exclaimationMarkCircle)
                     .foregroundColor(.purple)
                     .onTapGesture {
-                        
+                        showPopover = true
+                    }
+                    .popover(isPresented: $showPopover, arrowEdge: .leading) {
+                        EditListItemView(item: item, onUpdated: {
+                            showPopover = false;
+                        })
                     }
             }
         }
         .contentShape(Rectangle())
         .onHover { value in
-            active = value
+            if !showPopover {
+                active = value
+            }
+      
         }
     }
 }

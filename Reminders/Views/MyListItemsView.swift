@@ -13,16 +13,19 @@ struct MyListItemsView: View {
     
     typealias ItemAdded = ((String, Date?) -> Void)?
     typealias ItemDeleted = ((MyListItemViewModel) -> Void)?
-    
+    typealias ItemComleted = ((MyListItemViewModel) -> Void)?
     var onItemAdded: ItemAdded
     var onItemDeleted: ItemDeleted
+    var onItemCompleted: ItemComleted
     
     
     
-    init(items: [MyListItemViewModel],onItemAdded: ItemAdded = nil, onItemDeleted: ItemDeleted = nil){
+    
+    init(items: [MyListItemViewModel],onItemAdded: ItemAdded = nil, onItemDeleted: ItemDeleted = nil, onItemCompleted: ItemComleted){
         self.items = items
         self.onItemAdded = onItemAdded
         self.onItemDeleted = onItemDeleted
+        self.onItemCompleted = onItemCompleted
     }
     
     
@@ -33,7 +36,10 @@ struct MyListItemsView: View {
                 ForEach(items, id: \.listItemId) {item in
                     ListItemCell(item: item, onListItemDeleted: {item in
                         onItemDeleted?(item)
-                    })
+                        
+                    }) { item in
+                        onItemCompleted?(item)
+                    }
                     Divider()
                 }
                 AddNewListItemView { title , dueDate in
@@ -44,8 +50,8 @@ struct MyListItemsView: View {
     }
 }
 
-struct MyListItemsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MyListItemsView(items: [])
-    }
-}
+//struct MyListItemsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MyListItemsView(items: [],)
+//    }
+//}

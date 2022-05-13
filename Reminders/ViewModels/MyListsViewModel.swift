@@ -83,6 +83,16 @@ class MyListsViewModel:NSObject, ObservableObject {
         }
     }
     
+    func markAsCompleted(_ item: MyListItemViewModel) {
+        let myListItem: MyListItem? = MyListItem.byId(id: item.listItemId)
+        
+        if let myListItem = myListItem {
+            myListItem.isCompleted = true
+            
+            try? myListItem.save()
+        }
+    }
+    
     private func fetchAll() {
         do {
         try fetchedResultsController.performFetch()

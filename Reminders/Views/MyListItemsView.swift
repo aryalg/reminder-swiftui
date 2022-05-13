@@ -21,7 +21,7 @@ struct MyListItemsView: View {
     
     
     
-    init(items: [MyListItemViewModel],onItemAdded: ItemAdded = nil, onItemDeleted: ItemDeleted = nil, onItemCompleted: ItemComleted){
+    init(items: [MyListItemViewModel],onItemAdded: ItemAdded = nil, onItemDeleted: ItemDeleted = nil, onItemCompleted: ItemComleted = nil){
         self.items = items
         self.onItemAdded = onItemAdded
         self.onItemDeleted = onItemDeleted

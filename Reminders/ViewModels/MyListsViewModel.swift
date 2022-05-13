@@ -52,6 +52,15 @@ class MyListsViewModel:NSObject, ObservableObject {
         }
     }
     
+    
+    func deleteItem(_ item: MyListItemViewModel) {
+        let myListItem: MyListItem? = MyListItem.byId(id: item.listItemId)
+        
+        if let myListItem = myListItem {
+            try? myListItem.delete()
+        }
+    }
+    
     private func fetchAll() {
         do {
         try fetchedResultsController.performFetch()

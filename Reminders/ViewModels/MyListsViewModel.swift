@@ -34,6 +34,12 @@ class MyListsViewModel:NSObject, ObservableObject {
         
     }
     
+    var allListItemsCounts: Int {
+        myLists.reduce(0) { sum, vm in
+            sum + vm.itemsCount
+        }
+    }
+    
     
     private func setupObservers() {
         let notificationCenter = NotificationCenter.default

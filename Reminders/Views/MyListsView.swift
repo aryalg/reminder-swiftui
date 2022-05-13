@@ -21,11 +21,12 @@ struct MyListsView: View {
         VStack(alignment: .leading, spacing: 0) {
             
             List {
-                Text("My List")
+                AllCountView(count: vm.allListItemsCounts)
+                Text("My Lists")
                 ForEach(vm.myLists) {myList in
                     
                     NavigationLink {
-                        MyListItemHeaderView(name: myList.name, count: 6, color: myList.color)
+                        MyListItemHeaderView(name: myList.name, count: myList.itemsCount, color: myList.color)
                         
                         
                         MyListItemsView(items: myList.items, onItemAdded:  { title, dueDate in
@@ -37,6 +38,8 @@ struct MyListsView: View {
                                 .font(.title)
                                 .foregroundColor(myList.color)
                             Text(myList.name)
+                            Spacer()
+                            Text("\(myList.itemsCount)")
                         }
                     }.contextMenu {
                         Button {

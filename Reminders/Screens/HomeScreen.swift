@@ -12,6 +12,7 @@ struct HomeScreen: View {
         NavigationView {
             
           SideBarView()
+                .frame(minWidth: 200)
             
             
             Text("MyLIstItems")
